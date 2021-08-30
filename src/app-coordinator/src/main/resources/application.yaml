@@ -1,0 +1,17 @@
+server:
+  port: ${APP_SERVER_PORT:8080}
+  servlet:
+    context-path: /api
+
+spring:
+  main:
+    banner-mode: off
+    allow-bean-definition-overriding: true
+
+job-clean-up:
+  scan-timeout-ms: ${JOB_SCAN_TIMEOUT_MS:60000}
+  max-age-ms: ${JOB_MAX_AGE_MS:360000}
+
+web-socket:
+  ping-timeout-ms: ${WS_PING_TIMEOUT:1000}
+  clean-timeout-ms: ${WS_CLEAN_TIMEOUT:60000}

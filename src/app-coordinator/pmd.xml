@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ruleset name="PMD.rul" xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>Rule Sets</description>
+    <!-- https://github.com/pmd/pmd/tree/master/pmd-java/src/main/resources/rulesets/java -->
+    <rule ref="rulesets/java/quickstart.xml"/>
+    <rule ref="category/java/bestpractices.xml"/>
+    <rule ref="category/java/security.xml"/>
+    <rule ref="category/java/performance.xml"/>
+</ruleset>
