@@ -1,0 +1,11 @@
+spring:
+  main:
+    banner-mode: off
+
+camel:
+  springboot:
+    main-run-controller: true
+
+master-server:
+  protocol: ${MASTER_SERVER_PROTOCOL:ws}
+  endpoint: ${MASTER_SERVER_ENDPOINT:localhost:8080/api/ws}

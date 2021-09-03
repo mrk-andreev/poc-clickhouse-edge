@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>Control panel</h1>
+  <div *ngIf="service.backends | async as backends">
+    <form [formGroup]="form">
+      <mat-form-field appearance="fill" class="input-block">
+        <mat-label>Backend</mat-label>
+        <mat-select formControlName="backend">
+          <mat-option *ngFor="let backend of backends" [value]="backend">
+            Backend #{{ backend }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field class="input-block" appearance="fill">
+        <mat-label>Leave a query to backend</mat-label>
+        <textarea matInput formControlName="query"></textarea>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="form.invalid"
+        (click)="submit(form.value)"
+      >
+        submit
+      </button>
+    </form>
+  </div>
+
+  <div *ngIf="requestService.state | async as state">
+    <div *ngIf="state === RequestState.PROCESSING">
+      <mat-progress-spinner
+        class="example-margin"
+        color="primary"
+        mode="indeterminate"
+      >
+      </mat-progress-spinner>
+    </div>
+    <div *ngIf="state === RequestState.FAIL">fail...</div>
+    <div *ngIf="state === RequestState.COMPLETE">
+      <h2>Result</h2>
+      <div *ngIf="requestService.response | async as response">
+        {{ response }}
+      </div>
+    </div>
+  </div>
+</div>

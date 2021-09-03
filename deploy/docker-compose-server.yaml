@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  frontend:
+    build:
+      context: ../src/ui-coordinator
+      dockerfile: Dockerfile
+    restart: always
+    networks:
+      - app_net
+    ports:
+      - "80:80"
+    logging:
+      options:
+        max-size: 10m
+
+  backend:
+    build:
+      context: ../src/app-coordinator
+      dockerfile: src/main/docker/Dockerfile
+    restart: always
+    networks:
+      - app_net
+    logging:
+      options:
+        max-size: 10m
+
+
+networks:
+  app_net:
+    driver: bridge
