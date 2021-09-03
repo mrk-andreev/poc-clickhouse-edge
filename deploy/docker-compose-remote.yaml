@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: ${FRONTEND_IMAGE}
+    restart: always
+    networks:
+      - app_net
+    ports:
+      - "80:80"
+    logging:
+      options:
+        max-size: 10m
+
+  backend:
+    image: ${BACKEND_IMAGE}
+    restart: always
+    networks:
+      - app_net
+    logging:
+      options:
+        max-size: 10m
+
+
+networks:
+  app_net:
+    driver: bridge
