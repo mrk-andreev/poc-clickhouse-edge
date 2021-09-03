@@ -11,6 +11,8 @@
 
 Proof of concept clickhouse edge installation.
 
+![](./docs/assets/Preview.gif)
+
 ## Overview
 
 - Data locality driven architecture
@@ -18,6 +20,8 @@ Proof of concept clickhouse edge installation.
 - Multiple Edge deployments with local DB (Clickhouse local)
 
 ![](./docs/assets/SolutionComponents.drawio.png)
+
+![](./docs/assets/SolutionPipelineAnimation.gif)
 
 - `src/app-coordinator` Coordinator application
 - `src/ui-coordinator` UI for coordinator
