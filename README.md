@@ -1,5 +1,7 @@
 # POC Clickhouse Edges
 
+![GitHub](https://img.shields.io/github/license/mrk-andreev/poc-clickhouse-edge?style=flat-square)
+
 Proof of concept clickhouse edge installation.
 
 ## Overview
