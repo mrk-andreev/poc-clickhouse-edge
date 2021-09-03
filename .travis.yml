@@ -1,0 +1,9 @@
+language: java
+jdk: openjdk11
+
+
+jobs:
+  include:
+    - stage: test-app-coordinator
+      before_script: mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+      script: mvn verify
