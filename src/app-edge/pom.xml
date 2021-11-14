@@ -15,7 +15,7 @@
     <description>Client</description>
     <properties>
         <java.version>11</java.version>
-        <camel-spring.version>3.11.0</camel-spring.version>
+        <camel-spring.version>3.13.0</camel-spring.version>
     </properties>
     <dependencies>
         <dependency>
@@ -87,10 +87,7 @@
                         </goals>
                         <configuration>
                             <target>
-                                <get src="https://builds.clickhouse.tech/master/amd64/clickhouse"
-                                     dest="${project.basedir}/src/main/resources/clickhouse"
-                                     verbose="true"
-                                     usetimestamp="true"/>
+                                <get src="https://builds.clickhouse.tech/master/amd64/clickhouse" dest="${project.basedir}/src/main/resources/clickhouse" verbose="true" usetimestamp="true"/>
                             </target>
                         </configuration>
                     </execution>
