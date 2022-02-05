@@ -15,7 +15,7 @@
     <description>Client</description>
     <properties>
         <java.version>11</java.version>
-        <camel-spring.version>3.14.1</camel-spring.version>
+        <camel-spring.version>3.15.0</camel-spring.version>
     </properties>
     <dependencies>
         <dependency>
