@@ -6,7 +6,7 @@ RUN npm i --quiet --no-progress
 COPY . /opt/app
 RUN npm run build
 
-FROM nginx:1.25.1-alpine
+FROM nginx:1.25.2-alpine
 ENV NGINX_PORT=80
 COPY ./nginx /etc/nginx
 COPY  --from=builder /opt/app/dist/ui-server /opt/app
